@@ -121,6 +121,7 @@ Given $p \implies q$
 
 ### Biconditional
 * p iff q
+* p $\iff$ q $\equiv$ (p $\implies$ q) $\land$ (q $\implies$ p)
 * $p \iff q$
 
 ### Precedence of Logical Operators
@@ -192,9 +193,17 @@ Treasure in one
 
 # Laws
 ![[Pasted image 20240821122530.png]]
+### Conditional Conjunction Equivalence
+$p \implies q \equiv \neg p \lor q$
+### Absorption
+$p \lor (p \land q) \equiv p$
+$p \land (p \lor q) \equiv p$
 
-### Equivalence
-$p \equiv q \text{ iff } p \iff q \equiv T$
+
+### Prove Equivalence
+$$p \equiv q \text{ iff: }$$$$
+p \iff q \equiv T$$
+
 
 ### A Proof for DeMorgan's First Law
 Law: $\neg (p \land q) \equiv \neg p \lor q$
@@ -206,3 +215,67 @@ Law: $\neg (p \land q) \equiv \neg p \lor q$
 | F   | T   | T        | F        | F           | T                  | T                     |
 | F   | F   | T        | T        | F           | T                  | T                     |
 
+Prove logical equivalences without truth tables by using logical equivalences
+
+Show that $(p \land q) \implies (p \lor q)$  is a tautology
+
+| $(p \land q) \implies (p \lor q)$      | Given              |
+| -------------------------------------- | ------------------ |
+| $\neg(p \land q) \lor (p \lor q)$      | Cond. Disj. Equiv. |
+| $(\neg p \lor \neg q) \lor (p \lor q)$ | DeMorgan's         |
+| $(\neg p \lor p) \lor (\neg q \lor q)$ | Asoc. & Comm.      |
+| $T \lor (\neg q \lor q)$               | Negation law       |
+| $T$                                    | Domination Law     |
+
+## Satisfiability
+A compound proposition is satisfiable if there is an assignment of truth vaues to its variables that make it true (when it is a tautology or contingency)
+A compound proposition will be unsatisfiable if and only if it is a contradiction
+
+# Predicates and Quantifiers
+## Propositional Logic vs Predicate Logic
+Example:
+* x > 3
+* x is the **subject**
+* "less than 3" is the **predicate**
+	* a property of x 
+* "x < 3" can be represented by $P(x)$
+	* P denotes the predicate, x is the variable 
+	* $P(77) = 77<3$
+* Let $Q(x, y)$ denote $x = 3-y$
+
+## Universal Quantifier
+* The universal quantification of P(x) is the statement "P(x) for all values of x in the domain"
+* $\forall x P(x)$ "for all x in P(x)"
+* $\forall$ is the universal quantifier
+
+Must include domain in statements
+
+## Existential Quantifier
+* The existential quantification of P(x) is the proposition: “There exists an element x in the domain such that P(x).”
+* "For some", at least one / it **exists**
+* $\exists x P(x)$
+
+## Uniqueness Quantifier
+* "There exists a **unique**", i.e. only one
+* $\exists ! x P(x)$
+* e.g. $\exists ! x (x^2 = 9) \equiv F$, due to -3, 3
+* $\exists ! x P(x) \equiv \exists x (P(x) \land \forall y (y \neq x \implies \neg P(y))$
+
+$\forall, \exists$ takes precedent over all logical operators
+
+## Quantifiers over Finite Domains
+If the domain of a quantifier is finite, then you can convert quantified statements to propositional logic
+e.g. if domain = {$x_1, x_2$}
+$\forall x P(x) \equiv P(x_1) \land P(x_2)$
+$\exists x P(x) \equiv P(x_1) \lor P(x_2)$
+
+
+## Domain Shorthand example
+$\forall x < 0 (x^2 < 0)$ "for all x less than 0, $x^2<0$" 
+
+## De Morgan's Laws for Quantifiers
+
+| Negation              | Equivalent Statement  | Negation is true when...            | Negation is false when...          |
+| --------------------- | --------------------- | ----------------------------------- | ---------------------------------- |
+| $\neg \exists x P(x)$ | $\forall x \neg P(x)$ | P(x) is false for every x           | There is an x that makes P(x) true |
+| $\neg \forall x P(x)$ | $\exists x \neg P(x)$ | There is an x that makes P(x) false | P(x) is true for every x.          |
