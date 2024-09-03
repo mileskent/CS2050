@@ -193,7 +193,7 @@ Treasure in one
 
 # Laws
 ![[Pasted image 20240821122530.png]]
-### Conditional Conjunction Equivalence
+### Conditional Disjunction Equivalence
 $p \implies q \equiv \neg p \lor q$
 ### Absorption
 $p \lor (p \land q) \equiv p$
@@ -279,3 +279,48 @@ $\forall x < 0 (x^2 < 0)$ "for all x less than 0, $x^2<0$"
 | --------------------- | --------------------- | ----------------------------------- | ---------------------------------- |
 | $\neg \exists x P(x)$ | $\forall x \neg P(x)$ | P(x) is false for every x           | There is an x that makes P(x) true |
 | $\neg \forall x P(x)$ | $\exists x \neg P(x)$ | There is an x that makes P(x) false | P(x) is true for every x.          |
+
+# Insert the new things from 1.5
+Double quant: DeMorgan allows to move neg inside if swap quant.
+Only have to be same x and y if in same scope. (Like programming)
+# End
+
+# Argument
+**Argument**: a set of initial statements, called premises, followed by a conclusion.
+An argument is valid if and only if in every case where all the premises are true, the conclusion is true.  Otherwise, the argument is invalid.
+* An argument can be valid even if the conclusion is false. This can occur if one of the premises is false.  The requirement here for “valid” is that the conclusion is true when all premises are true.
+* To prove a valid argument, show that the conjunction of the premises, leading to the conclusion is a tautology
+
+| Argument Name          | Logical Representation                                        |
+| ---------------------- | ------------------------------------------------------------- |
+| Modus Ponens           | $p$<br>$p \implies q$<br>$\therefore q$                       |
+| Modus tollens<br>      | $\neg q$<br>$p \implies q$<br>$\therefore \neg p$             |
+| Addition               | $p$<br>$\therefore p \lor q$                                  |
+| Simplification         | $p \land q$<br>$\therefore p$                                 |
+| Conjunction            | $p$<br>$q$<br>$\therefore p \land q$                          |
+| Hypothetical syllogism | $p \implies q$<br>$q \implies r$<br>$\therefore p \implies r$ |
+| Disjunctive syllogism  | $p \lor q$<br>$\neg p$<br>$\therefore q$                      |
+| Resolution             | $p \lor q$<br>$\neg p \lor r$<br>$\therefore q \lor r$        |
+
+
+### Example
+Want conclusion to be $b$
+$\neg d \land e$
+$c \lor d$
+$\neg a \implies \neg c$
+$\neg a \lor b$
+
+| Statements               | Reasons                                              |
+| ------------------------ | ---------------------------------------------------- |
+| $\neg d \land e$         | Given                                                |
+| $c \lor d$               | Given                                                |
+| $\neg a \implies \neg c$ | Given                                                |
+| $\neg a \lor b$          | Given                                                |
+| $\neg d$                 | Simplification on $\neg d \land e$                   |
+| $c$                      | Disjunctive Syllogism on $c \lor d$ and $\neg d$<br> |
+| $a$                      | Modus Tollens $c$ and $\neg a \implies \neg c$       |
+| $b$                      | Disjunctive Syllogism on $\neg a \lor b$ and $a$     |
+| $\therefore b$           |                                                      |
+
+## Fallacy
+
