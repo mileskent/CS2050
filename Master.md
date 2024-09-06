@@ -283,6 +283,13 @@ $\forall x < 0 (x^2 < 0)$ "for all x less than 0, $x^2<0$"
 # Insert the new things from 1.5
 Double quant: DeMorgan allows to move neg inside if swap quant.
 Only have to be same x and y if in same scope. (Like programming)
+ 
+| Statement  | The statement is true when…                         | The statement is false when…                                         |
+| ---------- | --------------------------------------------------- | -------------------------------------------------------------------- |
+| ∀x∀yP(x,y) | P(x,y) is true for all pairs x,y                    | There is a pair x,y that makes P(x,y) false                          |
+| ∀x∃yP(x,y) | For each x, you can find a y that makes P(x,y) true | There is a value for x such that no value for y can make P(x,y) true |
+| ∃x∀yP(x,y) | There is an x that makes P(x,y) true for every y    | There is not a single x that makes P(x,y) true for every y           |
+| ∃x∃yP(x,y) | There is a pair x,y that makes P(x,y) true          | There are no pairs x,y that make P(x,y) true                         |
 # End
 
 # Argument
@@ -324,3 +331,55 @@ $\neg a \lor b$
 
 ## Fallacy
 
+## Intro to Proofs: Direct Proof
+**Theorem** a statement that can be shown to be true.
+**Proof** a valid argument that establishes the truth of a theorem
+**Lemma** less important theorems usually used to prove complicated theorems
+**Corollary** a theorem that is established directly from a theorem that has been proved
+**Conjecture** a statment that is being proposed as true
+* Proving one makes it a theorem
+
+Useful definitions and axioms
+1. The integer n is even if there exists an integer k such that n = 2k, and 
+2. n is odd if there exists an integer k such that n = 2k + 1. 
+3. Closure of multiplication in integers:  The product of two integers is an integer.  
+4. Closure of addition in integers: The sum of two integers is an integer
+5. Closure of subtraction in integers:  The difference of any two integers is an integer
+6. There is no closure of division (because of zero)
+7. # 3-5 above also work for real numbers.  replace all instances of the word integer with real number
+8. The real number r is rational if there exist integers p and q with q ≠ 0 such that r = p∕q.
+9. A real number that is not rational is called irrational.
+10. A number m is a perfect square iff there exists some integer k such that $m = k^2$
+
+Proof Format
+Introduction: Specify the type of proof technique you are using.  E.g. I proceed with a direct proof. If proving a theorem in the form of conditional. State “Assume the hyp. Is true” where hyp. Is the hypothesis of the conditional. Outline any other things you may need to use to build this proof. Body: Write your argument for your proof.  This step may typically contain multiple parts depending on both the proof technique and the theorem you are proving. Always define the domains of new variables you introduce See each proof technique for specifics. All simplification can be done in a single step. Any argument given should have a reason to go along with it.  e.g. Let n be odd.  By definition of odd, there's an integer k such that n = 2k+1. Conclusion. State “Therefore by (insert proof technique)…is proven.” where … was the thing you were proving. Be careful to specify the entire theorem and not just the conclusion.
+
+**Direct Proof** is a type of proof that directly leads to a conclusion, i.e. $p \implies q$. The assumption is that p is true, and we prove that q must follow.
+
+**Two Column Proof** a proof with statements and reasons. 
+
+$\mathbb{Z}$ set of int
+$\mathbb{R}$ set of real
+$\mathbb{Q}$ set of rational
+$\mathbb{C}$ set of complex
+
+Example:
+Give a direct proof of "If n is an even integer then $n^2$ is an even integer"
+
+Pf: 
+I proceed directly and assume $n$ is even.
+
+| Statement                                  | Reasons                                   |
+| ------------------------------------------ | ----------------------------------------- |
+| n is even                                  | Premise                                   |
+| Let n = 2k, where $k \in \mathbb{Z}$       | Definition of even<br>                    |
+| $n^2 = 4k^2$                               | Square both sides of the equation         |
+| $n^2 = 2(2k^2)$                            | Factoring out a 2                         |
+| Let $j = 2k^2$ for some $j \in \mathbb{Z}$ | Closure of multiplication in $\mathbb{Z}$ |
+| $n^2 = 2j$                                 | Substitution                              |
+| $n^2$ is even                              | Definition of even                        |
+We see that if $n$ is even, then $n^2$ is also even is proven. Have proved $p \implies q$
+
+**Paragraph proof** do your proof in a paragraph.
+
+You write a box at the end or smth.
