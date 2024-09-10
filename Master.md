@@ -383,3 +383,128 @@ We see that if $n$ is even, then $n^2$ is also even is proven. Have proved $p \i
 **Paragraph proof** do your proof in a paragraph.
 
 You write a box at the end or smth.
+
+## Proof by Contraposition
+$p \implies q$ goes to $\neg q \implies \neg p$
+
+#### Example 1:
+*Prove that if $n^2$ is an even and n is an integer, then n is even*
+This proof is probably easier using the contrapositive
+
+n is odd $\implies$ $n^2$ is odd
+This is the contrapositive
+
+$n = 2k + 1$
+$n^2 = 4k^2 + 4k + 1$
+$n^2 = 2(2k^2+ 2k) + 1$
+$z = 2k^2 +2k$
+$n^2 = 2z + 1$
+$n^2$ is odd
+
+Not all full proof btw, just showing how you can use the contrapositive
+
+#### Example 2
+Actual proof
+Prove that if n = ab, where a and b are positive integers, then a ≤ √n or b ≤ √n.
+
+We will be using a contrapositive
+n = ab
+$\sqrt{n} = \sqrt{a}\sqrt{b}$
+dead end, so use cp
+
+Scratch
+!( a ≤ √n or b ≤ √n) $\implies$ !(n = ab)
+ (a $>$ √n and b $>$ √n) $\implies$ n != ab
+ (ab $>$ b√n and b$\sqrt{n}$ $>$ $√n^2$ ) $\implies$ n != ab
+ (ab $>$ b√n and b$\sqrt{n}$ > n ) $\implies$ n != ab
+
+Pf:
+I proceed by proving the contrapositive which states
+if a > $\sqrt{n}$ and $b > \sqrt{n}$, then n != ab, for all a, b, $\in \mathbb{Z}$
+
+| 1   | $a>\sqrt{n}$             | Premise               |
+| --- | ------------------------ | --------------------- |
+| 2   | $b> \sqrt{n}$            | Premise               |
+| 3   | $ab > b\sqrt{n}$         | mult 1 by b           |
+| 4   | $b\sqrt{n} > \sqrt{n}^2$ | mult 2 by $sqrt{n}$   |
+| 5   | $b\sqrt{n} > n$          | simplify 4            |
+| 6   | ab > n                   | Transitivity on 3 & 5 |
+| 7   | $ab \not = n$            | def of >              |
+Therefore, our proof by contrapositive suceeded, and thus, the equivalent "For all a, b $\in \mathbb{Z}$, if n = ab then $a $\leq$ $\sqrt{n}$ || b $\leq$ $\sqrt{n}$" is true.
+$\square$
+
+## Proof by Contradiction
+All props are either true or false
+When trying to prove p is true, assume that p is false. Given this, break some equality or property of mathematics. Thus, p is true.
+
+We'd assume if p then q is false
+Giving us: $\neg(p\implies q)$
+Leading to $p \land \neg q$ (with simplification) is true
+
+#### Example 1
+Give a proof by contradiction of the theorem “If 5n + 2 is odd, then n is odd.”
+
+In a proof by contradiction, assume $p \land \neg q$ is true, and find a contradiction.
+
+Pf:
+I proceed using a proof by contradiction, where I assume 5n + 2 is odd, and n is even.
+
+
+| 1   | 5n+2 is odd                       | premise                                                                                                 |
+| --- | --------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 2   | n is even                         | premise                                                                                                 |
+| 3   | n = 2k, for some k                | def of even                                                                                             |
+| 4   | 5n = 10k                          | multi (3) by value of 5                                                                                 |
+| 5   | 5n + 2 = 10k + 2                  | add 2 to (4)                                                                                            |
+| 6   | 5n + 2 = 2(5k + 1)                | factor (5)                                                                                              |
+| 7   | 5k + 1 = z, for z in $\mathbb{Z}$ | ***closure mult + add in z, meaning that multiplication and addition with integers, gives an integer*** |
+| 8   | 5n + 2 = 2z                       | sub (7) into (6)                                                                                        |
+| 9   | 5n + 2 is even                    | def. even                                                                                               |
+By (9) and (1), 5n+2 is both even and odd, which is a contradiction. Therefore, the original assumption that n is even is false, and "if 5n + 2 is odd, then n is odd" is proven.
+$\square$
+
+#### Example 2
+Show that at least four of any 22 days must fall on the same day of the week.
+
+Scratch:
+Assume not p.
+At most, 3 of any 22 days must fall on the same day of the week.
+3 * 7 = 21
+Contradiction
+
+Pf:
+Using proof by contradiction, I assume "At most, 3 of any 22 days must fall on the same day of the week".
+Since there are 7 named days, and at most 3 fall on the same day, we have used at most 
+3x7=21 days, which contradicts that we have 22 days. Thus, our assumption was wrong, and at least 4 of any 22 days must feel on the same day of the week"
+$\square$
+
+#### Example 3
+Prove that  √2 is irrational by giving a proof by contradiction
+Pf: I proceed using contradiction and assume $\sqrt{2} \in \mathbb{Q}$
+We also note that a rational number can be written in simplest form.
+Thus, we have $\sqrt{2} = \frac{p}{q}$ where $p, q \in \mathbb{Z}$, $q \not = 0$, and $p, q$ have no common factors
+$2 = \frac{p^2}{q^2}$, by squaring
+$2q^2 = p^2$
+Thus $p^2$ is even, by closue prop. and def of even
+Since $p^2$ is even, p is also even. And p = 2k for some $k \in \mathbb{Z}$
+Then through sub, we have $2q^2 = (2k)^2$
+$2q^2 = 4k^2$
+$2q^2 = 2(2k^2)$
+$q^2 = 2k^2$
+and thus, $q^2$ is even
+Thus q is even, and so q = 2m for some $m \in \mathbb{Z}$
+We see p and q both have a common factor of 2, which contradicts the premise that they had no common factors.
+Thus, our assumption that $\sqrt{2}$ is ration is false, and we are left with $\sqrt{2}$ as irrational.
+
+#### Example 6
+Let a and b be positive integers with the property that ab+1 divides a^2+b^2. Show that (a^2+b^2)/ (ab+1) is a perfect square.
+
+Pf:
+Just watch the lecture, view the notes later
+$\square$
+
+
+# When to use direct vs indirect proofs
+Simple suggestion:  Just try it.  Start with a direct proof and see what happens.  Do scratch work.  Never try to write a proof before doing scratch work. 
+Longer suggestion:  Hypotheses that can’t be easily reasoned from might suggest that you use an indirect proof. Look back to example 3.
+
