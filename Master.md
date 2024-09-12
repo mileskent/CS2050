@@ -280,7 +280,6 @@ $\forall x < 0 (x^2 < 0)$ "for all x less than 0, $x^2<0$"
 | $\neg \exists x P(x)$ | $\forall x \neg P(x)$ | P(x) is false for every x           | There is an x that makes P(x) true |
 | $\neg \forall x P(x)$ | $\exists x \neg P(x)$ | There is an x that makes P(x) false | P(x) is true for every x.          |
 
-# Insert the new things from 1.5
 Double quant: DeMorgan allows to move neg inside if swap quant.
 Only have to be same x and y if in same scope. (Like programming)
  
@@ -507,4 +506,92 @@ $\square$
 # When to use direct vs indirect proofs
 Simple suggestion:  Just try it.  Start with a direct proof and see what happens.  Do scratch work.  Never try to write a proof before doing scratch work. 
 Longer suggestion:  Hypotheses that can’t be easily reasoned from might suggest that you use an indirect proof. Look back to example 3.
+
+**Vacuous Proof**, with $p \implies q$, if $p \equiv F$, then the original statement must be true, regardless of q.
+
+**Trivial Proof**
+with $p \implies q$, whenever $q \equiv T$, then the original statement must be true, regardless of q.
+
+**Backwards Reasoning (Strategy)**
+This is a strategy that you can use in your scratch work. 
+- Suppose you're proving that q is true from a list of givens.
+- However, you're unable to figure out where to start based on those givens.
+- In this case, you might start with q and work backwards to something that you can prove using your givens.
+- Then when you write up your formal proof, you can do all the steps backwards.
+
+Example:
+Prove that (x+y)/2 >  √(xy) for all distinct positive real numbers x,y
+
+$x \not = y, x \geq 0, y \geq 0$
+Scratch:
+Start assuming conclusion is true.
+$\frac{x + y}{2} > \sqrt{xy}$
+$x + y > 2\sqrt{xy}$
+$(x + y)^2 > 4xy$
+$x^2 + y^2 + 2xy > 4xy$
+$x^2 + y^2 - 2xy > 0$
+$(x - y)^2 > 0$
+Not equal, thus LHS will be gt0
+Now for the Pf, just go backwards
+
+**Pf:**
+Let $x, y \in \mathbb{R}$, be arb. where $x \not = y$. Then $x - y \not = 0$.
+Thus, $(x - y)^2 > 0$ * since the square of a nonzero real number is postive.
+
+| S                                | R          |
+| -------------------------------- | ---------- |
+| 1) $(x - y)^2 > 0$               | By *       |
+| 2) $x^2 + y^2 - 2xy > 0$         | Distr.     |
+| 3) $x^2 + y^2 + 2xy > 4xy$       | Add 4xy    |
+| 4) $(x + y)^2 > 4xy$             | Factor LHS |
+| 5) $xy > 2\sqrt{xy}$             | sqrt 4)    |
+| 6) $\frac{x + y}{2} > \sqrt{xy}$ | div by 2   |
+We see that whenever x, y are distinct real \# s, then $\frac{x + y}{2} > \sqrt{xy}$
+$\square$
+
+## Exhaustive Proofs
+In an exhaustive proof we try every possibility of the proposition.  If all cases are true, then the proposition is proven.
+
+e.g. 
+Prove that $(n + 1)^3 ≥ 4^n$ if n is a positive integer with n ≤ 3.
+
+**Pf:**
+I proceed by exhaustion
+Let $P(n) \equiv (n + 1)^3 ≥ 4^n$
+**Case: P(1)**
+$P(1) \equiv (1 + 1)^3 ≥ 4^1 \equiv 8 \geq 4 \equiv T$
+
+**Case: P(2)**
+$P(2) \equiv (2 + 1)^3 ≥ 4^2 \equiv 27 \geq 16 \equiv T$
+
+**Case: P(3)**
+$P(3) \equiv (3 + 1)^3 ≥ 4^3 \equiv 64 \geq 64 \equiv T$
+
+$\therefore$ By exhaustion, $P(n)$ is true for all pos. int. where $n \leq 3$
+$\square$
+
+## Proof By Cases
+A proof by cases is used when you must break your proof up into different cases due to a single argument not being enough to prove all cases.
+e.g.
+Prove that if n is an integer, then $n^2 ≥ n$.
+$n = 0\ \implies \ n^2 = 0 = n \implies n^2 = n$
+$n <  0 \implies n \leq -1 \implies n^2 \geq 0 \implies n^2> 01 \geq n \implies n^2 \geq n$
+$n>1 \implies n^2 > n$
+
+**Pf:**
+Assume $n \in \mathbb{Z}$ is arbitrary. We have 3 cases: $n = 0, n\leq-1, n\geq1$
+Case: $n = 0$
+Since $n = 0$, $n^2 = 0= n \implies n^2 = n \implies n^2 \geq n$
+Case: $n \leq -1$
+$n^2 \geq 0$ since the square of an int is nonnegative. We know $0 \geq -1 \geq n$ by transitivity, we have $n^2 \geq n$
+Case: $n \geq 1$
+Mult ineq by $n$ gives $n^2 \geq n$
+Since we have proven all cases, then the original statement is true.
+$\square$
+
+## Without Loss of Generality
+Sometimes we can eliminate cases inproof when the cases are very similar.
+e.g.
+$x>0, y<0$ vs $y>0, x<0$
+You can say WLOG because the proofs for these cases with be exactly the same, except the x's and y's with be flipped.
 
