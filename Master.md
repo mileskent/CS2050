@@ -1,5 +1,3 @@
-[Living Schedule](https://docs.google.com/spreadsheets/d/1YJEb0nwD_ZhwjeUb3OkVpvrcvOUag-DTkvBzlKcSgkw/edit?gid=135811296#gid=135811296)
-
 # Propositional Logic
 
 A **proposition** is a declarative sentence that is either true or false, but not both
@@ -192,7 +190,7 @@ Treasure in one
 **Contingency**: everything else
 
 # Laws
-![[Pasted image 20240821122530.png]]
+![[Pasted image 20240821122530.png|300]]
 ### Conditional Disjunction Equivalence
 $p \implies q \equiv \neg p \lor q$
 ### Absorption
@@ -594,4 +592,130 @@ Sometimes we can eliminate cases inproof when the cases are very similar.
 e.g.
 $x>0, y<0$ vs $y>0, x<0$
 You can say WLOG because the proofs for these cases with be exactly the same, except the x's and y's with be flipped.
+
+## Induction
+Let P(n) be a proposition. To prove P(n) for all integers k.
+1. Basis step where we show P(1)
+2. Inductive step where we show that if P(k) then P(k+1)
+
+Ex:
+Prove that 
+$\sum^{n}_{j=1} j \frac{n(n+1)}{2}, n\in \mathbb{Z}^{+}$
+
+Pf:
+Let P(n) be $\sum^{n}_{j=1} j \frac{n(n+1)}{2}$. I use inductionto show P(n) is true for all int. n >= 1.
+
+Basis:
+P(1) is true bc $1 = \frac{1\cdot2}{2} = \frac{1(1 + 1)}{2}$
+
+Inductive Hypothesis:
+Assume that $P(k) = 1 + 2 + ... + k = \frac{k(k+1)}{2}$ is true for a fixed arbitrary integer $k \geq 1$
+
+
+Inductive Step:
+
+| 1 + 2 + ... k           | $\frac{k(k+1)}{2}$           |     |
+| ----------------------- | ---------------------------- | --- |
+| 1 + 2 + ... k + (k + 1) | $\frac{k(k+1)}{2} + (k + 1)$ |     |
+| """"                    | $\frac{k^2 + k + 2k + 2}{2}$ |     |
+| """"                    | $\frac{k^2 + 3k + 2}{2}$     |     |
+| """"                    | $\frac{(k+1)(k+2)}{2}$       |     |
+| """"                    | $\frac{(k+1)((k+1)+1)}{2}$   |     |
+We see that $P(k) \implies P(k+1)$ is true, completing the inductive step.
+By math induction, P(n) is true for all int n >= 1
+$\square$
+
+Make sure to add the $(k+1)^{\text{th}}$ term, not just k + 1
+
+Let a be constant and r be a common ratio
+$\sum_{j=0}^{n} ar^j = a + ar + ar^2 + ... + ar^n = \frac{ar^{n+1}-a}{r-1}, r \not = 1$
+
+Pf: Let  P(n) be $\sum_{j=0}^{n} ar^j = a + ar + ar^2 + ... + ar^n = \frac{ar^{n+1}-a}{r-1}, r \not = 1$. We us math. ind. to prove P(n) for all in $n \geq 0$
+
+Basis Step:
+P(0) is true because $\sum_{j=0}^{0} ar^0 = ar^0 = \frac{ar-a}{r-1}, r \not = 1$
+
+Inductive Hypothesis:
+Assume $\sum_{j=0}^{k} ar^j = a + ar + ar^2 + ... + ar^k = \frac{ar^{k+1}-a}{r-1}, r \not = 1, k \geq 0$
+
+Inductive Step:
+
+| $\sum_{j=0}^{k} ar^j = a + ar + ar^2 + ... + ar^k = \frac{ar^{k+1}-a}{r-1}, r \not = 1, k \geq 0$ | IH             |
+| ------------------------------------------------------------------------------------------------- | -------------- |
+| $"""" = a + ar + ar^2 + ... + ar^k + ar^{k+1} = \frac{ar^{k+1}-a}{r-1} + ar^{k+1}$                | add $ar^{k+1}$ |
+| $\sum_{j=0}^{k+1} ar^j = \frac{ar^{k+1}-a}{r-1} + ar^{k+1}$                                       | Summation def  |
+| $"""" = \frac{ar^{k+1}-a + ar^{k+1}(r-1)}{r-1}$                                                   | Simplify       |
+| $"""" = \frac{ar^{k+1}-a + ar^{k+1+1}-ar^{k+1}}{r-1}$                                             | Distributive   |
+| $"""" = \frac{-a + ar^{k+1+1}}{r-1}$                                                              | Simplify       |
+| $"""" = \frac{ar^{(k+1)+1} - a}{r-1}$                                                             | Commutative    |
+
+Thus $P(k) \implies P(k + 1)$ is proven, completing the inductive step. By induction, P(n) is true for all int. $n \geq 0$
+
+## Induction with Inequalities and Division
+Use backwards reasoning in induction proofs in the SW to get the answer
+
+
+~
+Prove that $n$ people can divide the cake fairly.
+
+n = 1 -> whole cake
+n = 2 -> 1/2 of whole cake
+n = 3 -> 1/3 of each 1/2
+n = 4 -> 1/4 of each 1/3
+
+Pf:
+Let $P(n)$ be that $n$ people can divide a cake fairly, so that each person has $\frac{1}{n}$ of the cake. I use induction to prov $P(n)$ is true for all integers $n \geq 1$
+
+Basis:
+$P(1)$ is true because one person would get the entire cake. 1/1
+
+Inductive Hypothesis:
+Assume $k$ people can divide the cake equally into $\frac{1}{k}$ pieces where $k \in \mathbb{Z}^{+}$
+
+Inductive Step:
+Consider $k$ people, by the inductive hypothesis, they split the cake such that each person has $\frac{1}{k}$ of the cake. Let another person join, now we have $k+1$ people. We will take $\frac{1}{k+1}$ of each existing person's slice.
+In order words, they take $\frac{1}{k+1}\cdot\frac{1}{k}$ of the original cake, from each of the original $k$ people.
+Since this occurred k times, they now have $k\frac{1}{k+1}\cdot\frac{1}{k} = \frac{1}{k+1}$. Each of the original $k$, originally had $\frac{1}{k}$ from which we took away $\frac{1}{1+k}$. Meaning $\frac{1}{k} - (\frac{1}{k+1} \cdot \frac{1}{k}) = \frac{1}{k+1}$ each other person also has $\frac{1}{k+1}$ of the original cake.
+Thus by math ind, $P(k) \implies P(k+1)$; $\forall n\in \mathbb{Z}^{+} P(n)$
+$\square$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
