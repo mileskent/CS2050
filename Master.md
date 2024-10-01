@@ -679,6 +679,54 @@ Since this occurred k times, they now have $k\frac{1}{k+1}\cdot\frac{1}{k} = \fr
 Thus by math ind, $P(k) \implies P(k+1)$; $\forall n\in \mathbb{Z}^{+} P(n)$
 $\square$
 
+# Strong Induction
+Induction but you do $(P(1) \land P(2) \land ... P(k)) \implies P(k+1)$
+You can also be like $P(j)$ for $j \in$ domain such that $b <= j <= k$
+
+# Sets
+An *unordered* collection of distinct objects
+- Made of elements
+- Denoted by capital letters
+- $a\in A$ means the element $a$ is in the set
+- $a \not \in A$ means the element $a$ is not in the set
+- $A = \{1, 2, 3, 4\}$
+Note: Before performing operations, reduce your sets so they contain no duplicates!!!
+### Set Builder Notation
+- All positive even integers less than a thousand
+	- $\{x \mid x \in \mathbb{Z}^{+} \land \text{x is even } \land x < 1000\}$
+### Relevant Sets
+- $\mathbb{N} = \{0, 1, 2, 3, ...\}$ 
+- $\mathbb{Z} = \{..., -1, 0, -1, ...\}$ 
+- $\mathbb{Q} = \{\frac{p}{q} \mid p,q \in \mathbb{Z} \land q \not = 0\}$
+- $\mathbb{R} = \{..., -1.223, 0, 2, ...\}$ 
+
+Note: $\{\mathbb{N}, \mathbb{R}, \mathbb{C}\}$ has only 3 elements, even though each element itself is an infinite set, and even though they overlap with one another. "A list of lists"
+
+### Equal set
+- $A = B$
+- $(A=B) \iff \forall x (x \in A \iff x \in B)$
+- $(A \subseteq B \land B \subseteq A) \iff A = B$
+### Empty Set
+$\varnothing = \{\}$ contains nothing
+note $\varnothing \not = \{\varnothing\}$
+### Singleton
+A set with one element
+note: $1 \not = \{1\}$
+### Venn Diagrams
+There is a universe set $U$, usually represented by a rectangle.
+
+### Subset
+- A is a subset of B
+	- $A \subseteq B$
+	- Could be equal
+- A is a proper subset of B
+	- $A \subset B$
+	- Cannot be equal
+
+### Superset
+Exist, but we don't really use the notation. Like how $<, >, \geq, \leq$ works
+$B \supseteq A$
+$B \supset A$
 
 
 
