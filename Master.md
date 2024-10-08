@@ -729,23 +729,152 @@ $B \supseteq A$
 $B \supset A$
 
 
+# Functions
+- Definition 1: Let A and B be nonempty sets. A function f from A to B is an assignment of exactly one element of B to each element of A. We write f (a) = b if b is the unique element of B assigned by the function f to the element a of A. If f is a function from A to B, we write f : A → B.
+- Definition 2: If f is a function from A to B, we say that A is the domain of f and B is the codomain of f. If f (a) = b, we say that b is the image of a and a is a preimage of b. The range, or image, of f is the set of all images of elements of A. Also, if f is a function from A to B, we say that f maps A to B.
+- You must specify the domain, codomain and the mapping of elements of the domain to elements in the codomain when defining a function. The range does not need to be explicitly specified
+- Two functions are equal when they have the same domain, codomain, and map each element of their common domain to the same element in their common domain.  
+	- Changing the domain, codomain or mapping creates a new function
+
+### Ex:
+1. What is the domain, codomain, and range of a function that assigns the last two bits of a bit string of length 2 or greater to that string.  (E.g. f(11010) = 10)
+- Domain
+	- The *set* of all bit strings $\geq$ 2
+- Codomain
+	- {11, 01, 10, 00}
+- Range
+	- {11, 01, 10, 00}
+Range and Codomain here happen to be equal
+
+2. Let f : R→ R assign the square of a real number to this real number. Then, f (x) = $x^2$ .. What is the domain, codomain, and range of f.
+* Domain
+	* $\mathbb{R}$
+* Codomain
+	* $\mathbb{R}$
+* Range
+	* $\mathbb{R} - \mathbb{R}^{-}$
+set operators have to order of precedence, except with union, intersect, and remove
+1. ()
+2. ~ complement
+3. Everything else left to right
+
+### Real-valued and Integer-Valued
+- A function is called real-valued if its codomain is the set of real numbers
+- it is called integer-valued if its codomain is the set of integers.
+- You can add and multiply both real-valued and integer-valued functions
+
+![[Pasted image 20241008082029.png]]
+A not necessarily a set of numbers
+
+### Ex
+Let f1 and f2 be functions from R to R such that f1 (x) = x2 and 
+f2 (x) = x − x2 . What are the functions f1 + f2 and f1 f2 ?
+
+$(f_1 + f_2)(x) = f_1(x) + f_2(x) = x^2 + x - x^2 = x$
+$(f_1 - f_2)(x) = f_1(x) - f_2(x) = x^2 - x + x^2 = 2x^2-x$
+
+# One-to-One Functions
+Some functions never assign the same value to two different domain elements. These functions are said to be one-to-one.
+- At most one mapping from the domain for every element of the codomain
+- Note that a function f is one-to-one if and only if f (a) ≠ f (b) whenever a ≠ b, and vice versa.
+- Note 2 in the codomain below
+
+![](https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdIlsuNJGqV81tpa465oTgKUMSMv9bB1LBt2caguXrkt0L1F117_4ZkTseH6R6jorMiluJ3SNYFJSkNHm0lITSz9ejTjWgLIPjrmYcUYV0bCzfhhh2605BCBB3fAGvRvK13_cp5TGrWmXJ11LbZITwOYvbnsH0a=s2048?key=2mZ9gCSz0BcdwA6VqOVR1g)
+Example: Determine whether the function f (x) = x2 from the set of integers to the set of integers is one-to-one.
+- False, every value square is also hit by its opposite squared
+- Assume domain if not given, to be the most reasonable real numbered domain or something similar.
+
+Example: Prove that the function f (x) = x + 1 from the set of real numbers to itself is one-to-one.
+- You need to show that if f(a) = f(b), then a = b
+By inspection it is 1-1 because it just shifts any value in the domain up by one.
+f: R->R
+Pf:
+Let a,b $\in \mathbb{R}$ be arbitrary and assume f(a) $\not =$ f(b). Then by def of f(x):
+a + 1 = b+1
+a=b
+Since f(a)=f(b) -> a=b f(x) is 1-1, by definition
+
+A function has to map all element in the domain to something in the codomain. Let the domain be R, the codomain be R. then f(x) = 1/x is not a function.
+
+# Increasing and Decreasing
+Given $x < y$, and x, y are in the proper domains, f is called:
+- increasing if f (x) ≤ f (y)
+- strictly increasing if f (x) < f (y)
+- decreasing if f (x) ≥ f (y)
+- strictly decreasing if    f (x) > f (y)
+
+Its defined exactly as what you'd think it would mean.
+Not all function match.
+Horizontal line would be both. Vertical line would be neither.
+
+Example: show that  $f(x) = x^2$  from R+ to R+ is strictly increasing.
+let x, y be positive reals and $x<y$
+$x<y$
+$x^2 < xy$
+$xy < y^2$
+$x^2 < y^2$
+$f(x) < f(y)$
+$\therefore x<y \implies f(x) < f(y)$
+
+# Onto Functions
+A function f from A to B is called onto, or a surjection, if and only if for every element b ∈ B there is an element a ∈ A with f (a) = b. A function f is called surjective if it is onto.
+- The range of the function equals the codomain. (every element in codomain is used.)
+- All elements of codomain are hit at least once
+- range = codomain
+![](https://lh7-rt.googleusercontent.com/slidesz/AGV_vUcjeKre7qiIh_XTjfxl8Qp6v-j6rVfncyVcohzNJi0L4zzvbZjqTcoeR9053iyVuMBbpWqjlIxuxHAP5wJazMLXu_PO_cCct29AHFbKM0FoeKzsobmqBuDFDcLB8x3TH9c0LdWeB3kUX91IDX5zfcQcb3Nv6Z5k=s2048?key=2mZ9gCSz0BcdwA6VqOVR1g)
+
+Let f be the function from {a, b, c, d} to {1, 2, 3} defined by f (a) = 3, f (b) = 2, f (c) = 1, and f (d) = 3. Is f an onto function?
+Yes.
+
+Is the function f (x) = $x^2$ from the set of integers to the set of integers onto?
+No. Not onto. All non square integers will be missed from the codomain. For example: 2,$\mathbb{Z}^{-}$
 
 
+Is  f (x) = x + 1 from the set of integers to the set of integers onto?
+- Consider an arbitrary element y ∈ B and find an element x ∈ A such that f (x) = y.
+Let y in Z (codomain). Try to find x in the domain that makes x+1=y. 
+x = y-1 <- Guaranteed to be in domain? (Yes for this case bc closure).
 
+# Bijections
+The function f is a one-to-one correspondence, or a bijection, if it is both one-to-one and onto. We also say that such a function is bijective. Exactly one domain element for every codomain element.
+- Bijections have special properties
+- All bijections have an inverse function
+![[Pasted image 20241008085642.png|500]]
 
+# Inverse
+Let f be a one-to-one correspondence from the set A to the set B. The inverse function of f is the function that assigns to an element b belonging to B the unique element a in A such that f (a) = b. The inverse function of f is denoted by f −1 . Hence, f −1(b) = a when f (a) = b.
+![](https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdCu6jqo0kDgzIlMMdR2flSiRz3IQ2y3gfK171UL4CLeuLbxSJtwwxwzjEKI6PGkxoZki00HAcNqfZJvSE2zwOOSZRU9hlaidKJyJB9JA7VFJKObEHzACyj-tqfP_Jv4Kv1PSO9ySXJQaY0ymAv3Sqy_HxiANtG=s2048?key=2mZ9gCSz0BcdwA6VqOVR1g)
 
+Let f : Z → Z be such that f (x) = x + 1. Is f invertible, and if it is, what is its inverse?
+f(x) is a bijection $\implies$ f(x) is invertible
 
+Get inverse.
+Replace f(x) with x. Replace x with $f(x)^{-1}$
 
+Let f be the function from R to R with f (x) = $x^2$. Is f invertible?
+f(x) not a bijection
 
+# Composition of Functions
+Let g be a function from the set A to the set B and let f be a function from the set B to the set C. The composition of the functions f and g, denoted for all a ∈ A by f ◦g, is the function from A to C defined by
+(f ◦ g)(a) = f (g(a)).
+![](https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdHPYRlsSLoCYFKlsSDZ6u7ieSKCrKv5teiTEq-YRWQ9GLmMybFousDCzg-pubTYhTDGk6rO4vlJFF29Vton-2WFW5-pzKIrN1637cMFRB5xAOaY0xOPaYehN05fM8QbkFSd3vQww0VVr0cCktduQaw1-m5Yilp=s2048?key=2mZ9gCSz0BcdwA6VqOVR1g)
 
+Let g be the function from the set {a, b, c} to itself such that g(a) = b, g(b) = c, and g(c) = a.
+Let f be the function from the set {a, b, c} to the set {1, 2, 3} such that   f (a) = 3, f (b) = 2, and f (c) = 1. 
+What is the composition of f and g, and what is the composition of g and f ?
+a -> 3, c->1,b->2
+a->undefined; g(f(x)) undefined, so the composition does not exist
 
+Let f and g be the functions from the set of integers to the set of integers defined by
+f (x) = 2x + 3 and g(x) = 3x + 2. 
+What is the composition of f and g?
+$f(g(x)) = 2(3x+2) + 3 = 6x + 4 + 3 = 6x + 7$
+What is the composition of g and f ?
+$g(f(x)) = 3(2x+3) + 2 = 6x + 9 + 2 = 6x + 11$
 
+$f(g(x)) \not = g(f(x))$, but it is possible, just in general
 
-
-
-
-
-
+# Floor and Ceiling Functions
 
 
 

@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "f3d3b05732b4c654",
@@ -148,6 +149,8 @@
   },
   "active": "faa08f1ffdb4f060",
   "lastOpenFiles": [
+    "Pasted image 20241008085642.png",
+    "Pasted image 20241008082029.png",
     "Master.md",
     "New Concept.md",
     "^.md",
