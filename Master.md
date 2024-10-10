@@ -875,19 +875,53 @@ $g(f(x)) = 3(2x+3) + 2 = 6x + 9 + 2 = 6x + 11$
 $f(g(x)) \not = g(f(x))$, but it is possible, just in general
 
 # Floor and Ceiling Functions
+### Floor
+largest integer less than or equal to $x$
+$\lfloor x \rfloor$
 
+### Ceiling
+smallest number greater than or equal to $x$
+$\lceil x \rceil$
 
+# Big-O Notation
+### Definition
+Memorize:
+![](https://lh7-rt.googleusercontent.com/slidesz/AGV_vUcrthtaYtDyxYZDDJspf2hqD_nNpS0j-5_h_67DxhGZ56sRiBrWlRgtMkFK0K85y85-fSAalHLtgYvMe5bHJNVxcMbW65C2b3pyt95CH4g4Z22vAA43xjiRSapC107bXHctTGYMunzeRDeGvbu1qSMeRD4hN7kkj2qAUIPFo6k16YmkYEeDD38=s2048?key=DF8c9eFAL488vdpkHkTjbw)
+C and k are called witnesses to the relationship f(x) is O(g(x)).
+- Trying to find an upper bound estimate of our function, i.e. if $f(x)$ is a quadratic, its big O is $O(x^2)$
+	- In this class, not trying to find smallest upper bound, unlike in computing
+	- We are just finding an upper bound
+	- $p(x^n) = O(x^n)$
+- k for when g(x) is growing faster than f(x) and is $\geq$ than f(x)
+	- k doesn't need to be the first x where this occurs, just one of them
+- What C means is that we only care about the parent function, i.e. we consider if $f(x) = 3x^2$ then $C = 3$ where $g(x) = x^2$, so that the functions are comparable.
 
+Pf:
+show that $f(x) = x^2 + 2x + 1$ is $O(x^2)$
+I proceed directly. (This proof only works for polynomials)
+Prove each term is $O(x^2)$
+$x^2 \leq \_x^2$
+$2x \leq \_x^2$
+$1 \leq \_x^2$
+======
+$|x^2| \leq |1x^2|, \forall x > 0$
+$|2x| \leq |2x^2|, \forall x > 1$ Did not have to pick this value, its just easier
+$|1| \leq |1x^2|, \forall x > 1$
+$x^2 + 2x + 1 \leq 4x^2, \forall x > 1$
+Thus C=4, k=1 as witnesses: $f(x)$ is $O(x^2)$
+$\square$
 
+## Big-O Complexity
+1. $O(n^n)$
+2. $O(n!)$
+3. $O(2^n)$
+4. $O(n^2)$
+5. $O(n\ log\ n)$
+6. $O(n)$ 
+7. $O(log\ n)$
+8. $O(1)$
 
-
-
-
-
-
-
-
-
+Have to memorize the theorem numbers.
 
 
 
