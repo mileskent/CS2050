@@ -923,8 +923,29 @@ $\square$
 
 Have to memorize the theorem numbers.
 
+# Cardinality of Sets
+#### Equal sets
+Two sets A and B have the same cardinality if and only if you can find a bijection from A to B. When A and B have the same cardinality, we write |A| = |B|
 
 
+#### Different  Sets
+If there is only a one-to-one function from A to B, the cardinality of A is less than or the same as the cardinality of B and we write 
+|A| ≤ |B|. 
+Furthermore, if there is a one-to-one function from A to B but there is no bijection, then |A| < |B|
+
+#### Countable
+- Finite sets are countable
+- The set of positive integers is countable
+- Any infinite set that has the same cardinality as the set of of positive integers is countable.
+- When an infinite set S is countable, we denote cardinality of S by $\aleph_0$ (read as aleph null). |S| = $\aleph_0$
+
+#### Hilbert's Grand Hotel
+Consider a hotel with a finite number of rooms.  Suppose all rooms are occupied. A new guest arrives.  Then there is no way to accommodate this guest without evicting a current guest.
+
+Hilbert's Grand Hotel: Consider a hotel with an infinitely countable number of rooms.  Assume all rooms are occupied. Suppose a new guest arrives.  Show that this guest can always be accommodated. In other words, show that we can always find a room for this guest without evicting a current guest.
+
+### Uncountable Sets
+Show that the set of real numbers is uncountable.  Hint: Show that (0,1) as a subset of R is uncountable which would show R is also uncountable
 
 
 
