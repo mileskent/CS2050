@@ -944,6 +944,8 @@ Consider a hotel with a finite number of rooms.  Suppose all rooms are occupied
 
 Hilbert's Grand Hotel: Consider a hotel with an infinitely countable number of rooms.  Assume all rooms are occupied. Suppose a new guest arrives.  Show that this guest can always be accommodated. In other words, show that we can always find a room for this guest without evicting a current guest.
 
+#### Cantor's Diagonalization Technique
+The one that proves $\mathbb{Q}$ is countable with the diagonals
 ### Uncountable Sets
 Show that the set of real numbers is uncountable.  Hint: Show that (0,1) as a subset of R is uncountable which would show R is also uncountable
 
