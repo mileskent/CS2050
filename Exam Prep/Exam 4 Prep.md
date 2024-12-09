@@ -2,8 +2,15 @@
 ### 1.1 Sum Rule
 1.1.1 A student rolls a fair six-sided die. What is the probability of rolling a number that is either 2 or 4?
 
+>[!solution]-
+$P(2) = P(4) = \frac{1}{6}$
+2 and 4 are mutually exclusive
+$A = P(2) + P(4) - P(2 \cap 4) = \frac{1}{6} + \frac{1}{6} - 0 = \frac{1}{3}$
+
 1.1.2 In a deck of 52 playing cards, what is the probability of drawing
 a card that is either a heart or a king?
+
+
 
 1.1.3 A bag contains 4 red balls, 5 blue balls, and 3 green balls. A
 ball is randomly drawn. What is the probability that the ball
