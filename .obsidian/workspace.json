@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prime.md",
+                "file": "Exam Prep/Exam 4 Prep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prime"
+              "title": "Exam 4 Prep"
             }
           }
         ]
@@ -164,6 +164,7 @@
   },
   "active": "4fa9c7147e47fd6c",
   "lastOpenFiles": [
+    "Prime.md",
     "Base Conversion.md",
     "Division.md",
     "Fundamental Theorem of Arithmetic.md",
@@ -171,7 +172,6 @@
     "Master.md",
     "Modular Arithmetic.md",
     "Exam Prep/Exam 4 Prep.md",
-    "Prime.md",
     "Exam Prep",
     "Pasted image 20240821122530.png",
     "Pasted image 20241008085642.png",
