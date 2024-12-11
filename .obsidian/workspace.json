@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "f3d3b05732b4c654",
@@ -165,16 +164,18 @@
   },
   "active": "4fa9c7147e47fd6c",
   "lastOpenFiles": [
+    "Exam Prep/Exam 4/Exam 4 Topic List.md",
     "Exam Prep/Exam 4/Exam 4 Prep.md",
+    "Product Rule.md",
+    "Fundamental Theorem of Arithmetic.md",
+    "Sum Rule.md",
     "Principle of Inclusion-Exclusion.md",
     "Pasted image 20241211132800.png",
     "Pasted image 20241211131909.png",
-    "Exam Prep/Exam 4/Exam 4 Topic List.md",
     "Exam Prep/Exam 4",
     "Prime.md",
     "Base Conversion.md",
     "Division.md",
-    "Fundamental Theorem of Arithmetic.md",
     "Integer Representation.md",
     "Master.md",
     "Modular Arithmetic.md",

@@ -1,5 +1,5 @@
 # 1 Fundamental Counting Principles
-### 1.1 Sum Rule
+### 1.1 [[Sum Rule]]
 **1.1.1** A student rolls a fair six-sided die. What is the probability of rolling a number that is either 2 or 4?
 >[!solution]-
 $P(2) = P(4) = \frac{1}{6}$
@@ -48,25 +48,41 @@ $|B| = 26$, $|F| = 6$, $|C| = 13$, $|F \cap C| = 3$
 $|F \cup C| = |F| + |C| - |F \cap C| = 6 + 13 - 3 = 16$
 $P(\text{Given Black, Not Face nor Club}) = \frac{10}{26}$
 
-### 1.2 Product Rule
-**1.2.1** A factory produces items, 95% of which are non-defective. If
-two items are randomly selected one after the other, what is
-the probability that both are non-defective?
+### 1.2 [[Product Rule]]
+**1.2.1** A factory produces items, 95% of which are non-defective. If two items are randomly selected one after the other, what is the probability that both are non-defective?
+> [!solution]-
+The drawing of the first item does not effect the odds of the second item. Therefore they are independent events and the [[Product Rule]] applies
+$P(\text{Two consecutive non-defective}) = P(\text{non-defective})^2 = 0.95^2 = 0.9025$
 
-1.2.2 In a group of students, 60% like math and 40% like physics.
-Assuming the two preferences are independent, what is the
-probability that a randomly selected student likes both math
-and physics?
+**1.2.2** In a group of students, 60% like math and 40% like physics.
+Assuming the two preferences are independent, what is the probability that a randomly selected student likes both math and physics?
+> [!solution]-
+> Apply [[Product Rule]]
+$P(M \cap P) = P(M) \cdot P(P) = 0.6 \cdot 0.4 = 0.24$
 
-1.2.3 A bag contains 3 red balls and 2 blue balls. A ball is drawn, its
+
+**1.2.3** A bag contains 3 red balls and 2 blue balls. A ball is drawn, its
 color is noted, and it is not replaced. Another ball is drawn.
 What is the probability that:
-• The first ball is red and the second ball is blue?
-• The first ball is blue and the second ball is red?
+• The first ball is red and the second ball is blue? #nokey
+> [!solution]-
+$P(R)$ in the original universe = $\frac{3}{5}$
+$P(B)$ in the universe once one red ball is drawn = $\frac{2}{4}$
+Apply [[Product Rule]]
+$P(R) \cdot P(B) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$
+
+• The first ball is blue and the second ball is red? #nokey
+> [!solution]-
+> $P(B)$ in the original universe = $\frac{2}{5}$
+> $P(R)$ in the universe once one blue ball is drawn = $\frac{3}{4}$
+> Apply [[Product Rule]]
+> $P(B) \cdot P(R) = \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20}$ 
 
 ### 1.3 Inclusion Exclusion Principle
-1.3.1 How many bit strings of length 8 begin with 111 or end with
+**1.3.1** How many bit strings of length 8 begin with 111 or end with
 010
+
+
 1.3.2 How many numbers below 100 are divisible by 2,3, or 5?
 
 1.3.3 Suppose you need to come up with a password that uses only
