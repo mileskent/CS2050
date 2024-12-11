@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exam Prep/Exam 4 Prep.md",
+                "file": "Exam Prep/Exam 4/Exam 4 Prep.md",
                 "mode": "source",
                 "source": false
               },
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "f3d3b05732b4c654",
@@ -164,6 +165,12 @@
   },
   "active": "4fa9c7147e47fd6c",
   "lastOpenFiles": [
+    "Exam Prep/Exam 4/Exam 4 Prep.md",
+    "Principle of Inclusion-Exclusion.md",
+    "Pasted image 20241211132800.png",
+    "Pasted image 20241211131909.png",
+    "Exam Prep/Exam 4/Exam 4 Topic List.md",
+    "Exam Prep/Exam 4",
     "Prime.md",
     "Base Conversion.md",
     "Division.md",
@@ -171,7 +178,6 @@
     "Integer Representation.md",
     "Master.md",
     "Modular Arithmetic.md",
-    "Exam Prep/Exam 4 Prep.md",
     "Exam Prep",
     "Pasted image 20240821122530.png",
     "Pasted image 20241008085642.png",

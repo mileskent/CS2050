@@ -1,22 +1,55 @@
 # 1 Fundamental Counting Principles
 ### 1.1 Sum Rule
-1.1.1 A student rolls a fair six-sided die. What is the probability of rolling a number that is either 2 or 4?
-
+**1.1.1** A student rolls a fair six-sided die. What is the probability of rolling a number that is either 2 or 4?
 >[!solution]-
 $P(2) = P(4) = \frac{1}{6}$
 2 and 4 are mutually exclusive
-$A = P(2) + P(4) - P(2 \cap 4) = \frac{1}{6} + \frac{1}{6} - 0 = \frac{1}{3}$
+$P(2) + P(4) - P(2 \cap 4) = \frac{1}{6} + \frac{1}{6} - 0 = \frac{1}{3}$
 
-1.1.2 In a deck of 52 playing cards, what is the probability of drawing
+**1.1.2** In a deck of 52 playing cards, what is the probability of drawing
 a card that is either a heart or a king?
+> [!help]- Hint
+> Use the [[Principle of Inclusion-Exclusion]]
 
+> [!solution]-
+The overall set of 52 cards can be $C$
+The set of all kings can be $K$
+The set of all hearts can be $H$
+$P(\text{King or Heart}) = \frac{|K \cup H|}{|C|}$
+Using [[Principle of Inclusion-Exclusion]]:
+$|K \cup H| = |K| + |H| - |K \cap H|$
+$|K \cup H| = 4 + 13 - 1 = 16$
+$P(\text{King or Heart}) = \frac{16}{52}$
 
-
-1.1.3 A bag contains 4 red balls, 5 blue balls, and 3 green balls. A
+**1.1.3** A bag contains 4 red balls, 5 blue balls, and 3 green balls. A
 ball is randomly drawn. What is the probability that the ball
 is either red or green?
+> [!solution]-
+$P(\text{Red or Green}) = \frac{|G \cup R|}{|B|} = \frac{3 + 4 - 0}{12} = \frac{7}{12}$
+
+**1.1.4** A group of students is playing a card game using two standard decks of 52 cards each. If a single card is randomly drawn from the shuffled decks:
+a) What is the probability that the card is a face card? #keydisagrees 
+> [!solution]-
+$P(\text{Face Card}) = \frac{|F_1 \cup F_2|}{|D_1 \cup D_2|} = \frac{24}{104} = \frac{12}{52}$
+
+b) How about a diamond? 
+> [!solution]-
+$P(\text{Diamond}) = \frac{|\diamond_1 \cup \diamond_2|}{|D_1 \cup D_2|} = \frac{26}{104} = \frac{13}{52}$
+
+c) Lastly, a black card that isn’t a face card nor a club? #keydisagrees
+
+> [!help]- Hint
+> Use [[Principle of Inclusion-Exclusion]]
+
+> [!solution]-
+$P(\text{Given Black, Not Face nor Club}) = \frac{|B| - |F \cup C|}{|B|}$
+Where $F$ is black face cards, where $C$ is black clubs
+$|B| = 26$, $|F| = 6$, $|C| = 13$, $|F \cap C| = 3$
+$|F \cup C| = |F| + |C| - |F \cap C| = 6 + 13 - 3 = 16$
+$P(\text{Given Black, Not Face nor Club}) = \frac{10}{26}$
+
 ### 1.2 Product Rule
-1.2.1 A factory produces items, 95% of which are non-defective. If
+**1.2.1** A factory produces items, 95% of which are non-defective. If
 two items are randomly selected one after the other, what is
 the probability that both are non-defective?
 

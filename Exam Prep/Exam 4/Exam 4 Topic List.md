@@ -1,0 +1,40 @@
+- 6.1
+	- Know how to do any counting problem discussed in 6.1, 6.2, 6.3, 6.5
+		- Tree diagrams
+		- Product rule
+		- Sum rule
+		- Division Rule
+		- Subtraction Rule
+- 6.2
+	- Pigeonhole Principle
+	- Generalized Pigeonhole Principle
+	- Similar problems to pigeonhole
+	- proofs with pigeonhole
+- 6.3
+	- Permutations
+		- Order matters
+		- Know the formulas
+		- Know when to use it
+	- Combinations
+		- Order doesn’t matter
+		- Know the formula
+		- Know that C(n,r) = C(n,n-r)
+		- Know when to use them
+- 6.5
+	- Permutations with repetition
+		- $n^r$ = the number r-permutations of a set of n objects
+	- Combination with repetition
+		- Stars and bars
+			- When choosing r elements from n objects and unlimited repetition is allowed, you can find the number of possibilities using C(n+r-1,r)
+			- or C(stars + bars, stars)
+	- Counting Indistinguishable Objects:
+		- See Day 24 Slides on counting indistinguishable objects
+			- E.g. Reordering  the letters in “SUCCESS”
+			- How many strings of length ten can be formed using three 0’s, four 1’s, three 2’s.
+- 7.1
+	- Know what an experiment, sample space, and an event is
+	- Know how to calculate the probability of an event E
+	- Know how to calculate the probability of the complement of an event. 
+	- Know how to calculate the probability of the union of two events.
+	- Many of these types of questions require you to be competent with counting from unit 7.  
+- Principle of Inclusion-Exclusion
