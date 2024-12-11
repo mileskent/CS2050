@@ -3,5 +3,7 @@
   "accentColor": "#f55c5c",
   "enabledCssSnippets": [
     "imagecenter"
-  ]
+  ],
+  "baseFontSize": 16,
+  "baseFontSizeAction": false
 }

@@ -79,22 +79,128 @@ $P(R) \cdot P(B) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$
 > $P(B) \cdot P(R) = \frac{2}{5} \cdot \frac{3}{4} = \frac{6}{20}$ 
 
 ### 1.3 Inclusion Exclusion Principle
-**1.3.1** How many bit strings of length 8 begin with 111 or end with
-010
+**1.3.1** How many bit strings of length 8 begin with 111 or end with 010?
+> [!help]- Hint
+> Apply [[Principle of Inclusion-Exclusion]]
 
+> [!solution]-
+> Let $A$ be the set of 8 length binary strings that begin with 111.
+> Let $B$ be the set of 8 length binary strings that end with 010.
+> We want to find $|A \cup B|$
+> $|A \cup B| = |A| + |B| - |A \cap B|$
+> 	[[Principle of Inclusion-Exclusion]]
+> $|A|$:
+> 	*`1 1 1 _ _ _ _ _`*
+> 	*How many 5 length binary strings are there = $|C|$*
+> 	*$|A| = |C| = 2^5$*
+>
+> $|B|$:
+> 	`_ _ _ _ _ 0 1 0`
+> 	How many 5 length binary strings are there = $|C|$
+> 	$|B| = |C| = 2^5$
+>
+> $|A \cap B|$:
+> 	`1 1 1  _ _ 0 1 0`
+> 	How many 2 length binary strings are there = $|D|$
+> 	$|A \cap B| = |D| = 2^2$
+>
+> $\therefore |A \cup B| = 2^5 + 2^5 - 2^2 = 60$
 
-1.3.2 How many numbers below 100 are divisible by 2,3, or 5?
+**1.3.2** How many numbers below 100 are divisible by 2,3, or 5?
+> [!help]- Hint
+> Involves lcm and [[Principle of Inclusion-Exclusion]]
 
-1.3.3 Suppose you need to come up with a password that uses only
-the letters A, B, and C and which must use each letter at least
-once. How many such passwords of length 8 are there?
+> [!solution]-
+> Use [[Principle of Inclusion-Exclusion]]
+> $|S_{5} \cup S_{2} \cup S_{3}| = |S_{5}| + |S_{3}| + |S_{2}| - |S_{3} \cap S_{2}| - |S_{3} \cap S_{5}| - |S_{5} \cap S_{2}| + |S_{5} \cap S_{3} \cap S_{2}|$
+> 
+> $|S_5| = \frac{100}{5} - 1 = 19, |S_{2}| = \frac{100}{2} - 1 = 49, |S_{3}| = \frac{100}{3} = 33$ 
+> 
+> $|S_{3} \cap S_{2}|$:
+> $lcm(3, 2) = 6$
+> $|S_{3} \cap S_{2}| = |S_6| = \frac{100}{6} = 16$
+> 
+> $|S_{3} \cap S_{5}|$:
+> $lcm(3,5) = 15$
+> $|S_{3} \cap S_{5}| = |S_{15}| = \frac{100}{15} = 6$
+> 
+> $|S_{5} \cap S_{2}|$:
+> $lcm(5,2) = 10$
+> $|S_{5} \cap S_{2}| = |S_{10}| = \frac{100}{10} - 1 = 9$
+> 
+> $|S_{5} \cap S_{3} \cap S_{2}|$:
+> $lcm(2, 3, 5) = 30$
+> $|S_{5} \cap S_{3} \cap S_{2}| = |S_{30}| = \frac{100}{30} = 3$
+> 
+> $|S_{5} \cup S_{2} \cup S_{3}| = 19 + 49 + 33 - 16 - 6 - 9 + 3 = 73$
 
-1.3.4 Suppose that 4 people are standing in line. How many ways
-are there to rearrange the line so that nobody is standing in
-their original place
+**1.3.3** Suppose you need to come up with a password that uses only the letters A, B, and C and which must use each letter at least once. How many such passwords of length 8 are there?
+> [!solution]-
+> Let $S$ be the set that uses all characters (A, B, or C) without constraints. This is the universe. Equal to $3^8$
+> 
+> Let $S_{BC}$ be only Bs and Cs = $2^8$
+> Let $S_{AC}$ be only As and Cs = $2^8$
+> Let $S_{AB}$ be only As and Bs = $2^8$
+> Use [[Principle of Inclusion-Exclusion]] to find invalid passwords
+>
+> $|S_{BC} \cup S_{AC} \cup S_{AB}| = |S_{BC}| + |S_{AC}| + |S_{AB}|$
+> $- |S_{BC} \cap S_{AC}| - |S_{BC} \cap S_{AB}| - |S_{AC} \cap S_{AB}|$
+> $+ |S_{BC} \cap S_{AC} \cap S_{AB}|$
+>
+> $|S_{BC} \cup S_{AC} \cup S_{AB}| = 2^8 + 2^8 + 2^8 - 1 - 1 - 1 + 0$
+> 
+> $|S| -|S_{BC} \cup S_{AC} \cup S_{AB}| = 3^8 - 3 \cdot 2^8 + 3 \cdot 1 = 5796$
+
+**1.3.4** Suppose that 4 people are standing in line. How many ways are there to rearrange the line so that nobody is standing in their original place
+> [!solution]-
+> Let the original order be a string 1234, where person 1 is in position 1 at character 1, etc etc.
+> 
+> Let $S$ be the universe of possible line configurations. $|S| = 4!$
+> Let $S_1$ be the set of all configurations of the line where person 1 is in position 1
+> Let $S_2$ be the set of all configurations of the line where person 2 is in position 2
+> Let $S_3$ be the set of all configurations of the line where person 3 is in position 3
+> Let $S_4$ be the set of all configurations of the line where person 4 is in position 4
+> 
+> Solution is $|S| - |S_{1} \cup S_{2} \cup S_{3} \cup S_{4}|$
+> 
+> Find $|S_1|$:
+> Assume position 2 is already set. How many configurations are there of a 3 person line? This corresponds to $|S_1|$
+> 
+> $|S_1| = |S_2| = |S_{3}| = |S_{4}| = 3!$
+> The fixed position sets are not mutually exclusive, so we have to use [[Principle of Inclusion-Exclusion]]
+> $$
+> \begin{align*}
+> |S_{1} \cup S_{2} \cup S_{3} \cup S_{4}| &=\\
+> &|S_{1}| + |S_{2}| + |S_{3}| + |S_{4}|\\
+> & - |S_{1} \cap S_{2}| - |S_{1} \cap S_{3}| - |S_{1} \cap S_{4}|\\
+> & - |S_{2} \cap S_{3}| - |S_{2} \cap S_{4}|\\
+> & - |S_{3} \cap S_{4}|\\
+> & + |S_{1} \cap S_{2} \cap S_{3}|+ |S_{4} \cap S_{2} \cap S_{3}|\\
+> & + |S_{1} \cap S_{4} \cap S_{3}|+ |S_{1} \cap S_{2} \cap S_{4}|\\
+> & - |S_{1} \cap S_{2} \cap S_{3} \cap S_{4}|
+> \end{align*}
+> $$
+> 
+> 1 fixed 
+> - cardinality = $3!$
+> - count = 4
+> Intersection of 2 fixed 
+> - cardinality = $2!$
+> - count = 6
+> intersection of 3 fixed 
+> - cardinality = 1
+> - count = 4
+> intersection of 4 fixed 
+> - cardinality = 1
+> - count = 1
+> 
+> $|S_{1} \cup S_{2} \cup S_{3} \cup S_{4}| = 4 \cdot 3! - 6 \cdot 2! + 4 \cdot 1 - 1 = 15$
+> $|S| = 4! = 24$
+> $|S| - |S_{1} \cup S_{2} \cup S_{3} \cup S_{4}| = 9$
 
 ### 1.4 Permutations
 1.4.1 What is the formula for nPr?
+
 
 1.4.2 How many ways are there to select a first prize winner a
 second prize winner and a third prize winner from 100 different
