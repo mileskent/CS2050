@@ -199,63 +199,133 @@ $P(R) \cdot P(B) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$
 > $|S| - |S_{1} \cup S_{2} \cup S_{3} \cup S_{4}| = 9$
 
 ### 1.4 Permutations
-1.4.1 What is the formula for nPr?
+**1.4.1** What is the formula for $P(n,r)$?
+> [!solution]-
+> $$
+> P(n,r)= n \times (n-1) \times \cdots \times r = \frac{n!}{(n-r)!}
+> $$
 
+**1.4.2** How many ways are there to select a first prize winner a second prize winner and a third prize winner from 100 different people who have entered a contest?
+> [!solution]-
+> $P(100,3) = 100 \cdot 99 \cdot 98$
 
-1.4.2 How many ways are there to select a first prize winner a
-second prize winner and a third prize winner from 100 different
-people who have entered a contest
-
-1.4.3 How many permutations of the letters ABCDEFGH contain
-the string ABC
+**1.4.3** How many permutations of the letters ABCDEFGH contain the string "ABC", as in "ABC" in that order, together
+> [!solution]-
+> Let "ABC" be "X"
+> How many permutations of XDEFGH?
+> $6! = 720$
 
 ### 1.5 Combinations
-1.5.1 What is the formula for $n\choose{r}$?
+**1.5.1** What is the formula for $n\choose{r}$?
+> [!solution]-
+> It's exactly the same as $P(n, r)$, except you divide by the number of ways you can order the items you picked, which makes it so that order doesn't matter.
+> $$
+> {n\choose{r}} = C(n, r) = \frac{P(n, r)}{r!} = \frac{n!}{r!(n-r)!}
+> $$
 
-1.5.2 What is the value of C(9, 4) you can leave your answer in fac-
-torial format?
+**1.5.2** What is the value of C(9, 4) you can leave your answer in factorial format?
+> [!solution]-
+> $$
+> \frac{9!}{4!\cdot 5!}
+> $$
 
-1.5.3 A club has 8 members, they must choose 3 members to form
-their executive board. In what ways can they choose an exec-
-utive board?
+**1.5.3** A club has 8 members, they must choose 3 members to form their executive board. In what ways can they choose an executive board?
+> [!solution]-
+> $$
+> C(8, 3) = \frac{P(8, 3)}{3!} = \frac{8 \cdot 7 \cdot 6}{3 \cdot 2 \cdot 1} = 56
+> $$
 
 ### 1.6 Pigeonhole Principle
-1.6.1 If there are 11 pairs of socks in your drawer, and you blindly
-take out one sock at a time until you get a pair. How many
-socks do you need to take out to guarantee that you have at
-least one pair of socks?
+**1.6.1** If there are 11 pairs of socks in your drawer, and you blindly take out one sock at a time until you get a pair. How many socks do you need to take out to guarantee that you have at least one pair of socks?
+> [!solution]-
+$$
+ 12
+$$
 
-1.6.2 25 crates of apples are delivered to a store. The apples are of
-3 different types. All crates only have one type of apple. Show
-that there is at least one type of apple that has 9 crates of it.
+**1.6.2** 25 crates of apples are delivered to a store. The apples are of 3 different types. All crates only have one type of apple. Show that there is at least one type of apple that has 9 crates of it.
+> [!solution]-
+> $A + B + C = 25$
+> $8 + 8 + 8 < 25 \quad \therefore A \lor B \lor C \geq 9$
 
-1.6.3 Fifteen squirrels collected 100 acorns, show that at least one
-pair of squirrels collected the same amount of acorns
+**1.6.3** Fifteen squirrels collected 100 acorns, show that at least one pair of squirrels collected the same amount of acorns
+> [!solution]-
+> Let's assume that the squirrels all collected different quantities of acorns. We use the smallest possible values.
+> Therefore, the following must be true
+> $$
+> \sum_{i=0}^{14} = 100
+> $$
+> However, this sum is equal to 105. This implies that it is impossible for each of the squirrels to have unique amounts of acorns. Therefore, at least 2 squirrels have the same number of acorns.
 
-### 1.7 Stars and Bars
-1.7.1 How many ways can you give 7 cookies to 4 children
+### 1.7 [[Stars and Bars]]
+**1.7.1** How many ways can you give 7 cookies to 4 children
 
-1.7.2 Find the number of non-negative integer solutions to the equa-
-tion:
-x1 + x2 + x3 + x4 = 12
+> [!help]- Hint
+> Use [[Stars and Bars]]
 
-1.7.3 Determine the number of non-negative integer solutions to the
-equation:
-x1 + x2 + x3 = 15
-where x1 ≥ 3, x2 ≥ 1, and x3 ≥ 5.
+> [!solution]-
+7 stars, 3 bars
+> $$
+> C(7+3, 3) = C(10, 3) = \frac{10!}{7!3!} = 120
+> $$
+
+**1.7.2** Find the number of non-negative integer solutions to the equa-
+tion: x1 + x2 + x3 + x4 = 12
+> [!solution]-
+> How many ways can you give 12 ones to 4 x's?
+> 12 stars, 3 bars
+> $$C(12 + 3, 3) = C(15, 3) = \frac{15!}{11!4!}= 455$$
+
+1.7.3 Determine the number of non-negative integer solutions to the equation: 
+	x1 + x2 + x3 = 15
+	where x1 ≥ 3, x2 ≥ 1, and x3 ≥ 5.
+> [!solution]-
+> Give x1 3. Give x2 1. Give x3 5.
+> x1 + x2 + x3 = 6
+> Give 6 ones to 3 x's.
+> 6 stars 2 bars
+> $$
+> C(8, 2) = \frac{8!}{6!2!} = 28
+> $$
 
 ### 1.8 Counting Indistinguishable Objects
-1.8.1 How many distinct arrangements can be made using the letters
-in the word:
-BANANA?
+**1.8.1** How many distinct arrangements can be made using the letters
+in the word: BANANA?
+> [!solution]-
+> - Pretend like there are no duplicate letters:
+> $6!$ arrangements
+> - Of those arrangements some will be exactly the same
+> Consider BANANA. We want to elimate the repeated arrangements
+> How many ways can you arrange 3 As? $3!$
+> How many ways can you arrange 2 Ns? $2!$
+> $$
+> \frac{6!}{3!2!} = 60
+> $$
+>> [!important]-
+> The formula to find the number of distinct arrangements of a set of objects, some of which are indistinguishable
+> where $n$ is the count of items
+> where each $k_i$ is the number of repetitions of an object
+>> $$
+> \frac{n!}{k_{1}! \cdot k_{2}! \cdot\ \cdots\ \cdot k_{n}!} = \frac{\text{Orderings ignoring repeats}}{\text{Product of orderings of each repeated item}}
+> $$
 
-1.8.2 You have 7 identical apples, 5 identical oranges, and 3 identical
-bananas. In how many ways can these be distributed into 4
-distinct baskets?
+**1.8.2** You have 7 identical apples, 5 identical oranges, and 3 identical bananas. In how many ways can these be distributed into 4 distinct baskets?
+> [!solution]-
+> How many ways to distibute 7 identical apples into 4 baskets?
+> - $C(10, 3)$
+>
+> How many ways to distibute 5 identical oranges into 4 baskets?
+> - $C(8, 3)$
+>
+> How many ways to distibute 3 identical bananas into 4 baskets?
+> - $C(6, 3)$
+>
+> $$
+> C(10,3) \cdot C(8, 3) \cdot C(6, 3) = 120 \cdot 56 \cdot 20 = 134400
+> $$
 
 ### 1.9 Bionomial Theorem
-1.9.1 A fair coin is flipped 6 times. What is the probability of getting
-exactly 3 heads?
+1.9.1 A fair coin is flipped 6 times. What is the probability of getting exactly 3 heads?
+
 
 1.9.2 A factory produces light bulbs, and 95% of the light bulbs
 pass the quality control test. If 15 light bulbs are randomly

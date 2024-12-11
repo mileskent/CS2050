@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4334dac819124dc1",
+        "id": "864c5062914ee90e",
         "type": "tabs",
         "children": [
           {
-            "id": "4fa9c7147e47fd6c",
+            "id": "a5cf37c925533da6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,10 +162,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4fa9c7147e47fd6c",
+  "active": "a5cf37c925533da6",
   "lastOpenFiles": [
-    "Principle of Inclusion-Exclusion.md",
+    "Stars and Bars.md",
     "Exam Prep/Exam 4/Exam 4 Prep.md",
+    "Principle of Inclusion-Exclusion.md",
     "Exam Prep/Exam 4/Exam 4 Topic List.md",
     "Product Rule.md",
     "Fundamental Theorem of Arithmetic.md",
