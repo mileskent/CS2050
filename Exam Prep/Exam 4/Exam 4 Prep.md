@@ -478,12 +478,15 @@ with finding:
 > $$
 > m^n
 > $$
+> ![[Pasted image 20241211234200.png]]
 
 • The number of injections from A to B.
-> [!solution]
+> [!solution]-
 > $$
 > P(m,n)
 > $$
+> ![[Pasted image 20241211234311.png]]
+
 
 • The number of surjections from A to B.
 Idek wtf this shit is

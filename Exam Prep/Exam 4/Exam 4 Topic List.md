@@ -1,10 +1,14 @@
 - 6.1
 	- Know how to do any counting problem discussed in 6.1, 6.2, 6.3, 6.5
 		- Tree diagrams
-		- Product rule
-		- Sum rule
+			- ![[Pasted image 20241211234010.png]]
+		- [[Product Rule]]
+		- [[Sum Rule]]
 		- Division Rule
+			- Dividing elimates events
+			- e.g transforming nPr to nCr
 		- Subtraction Rule
+			- Just use [[Principle of Inclusion-Exclusion]]
 - 6.2
 	- Pigeonhole Principle
 	- Generalized Pigeonhole Principle
@@ -31,10 +35,16 @@
 		- See Day 24 Slides on counting indistinguishable objects
 			- E.g. Reordering  the letters in “SUCCESS”
 			- How many strings of length ten can be formed using three 0’s, four 1’s, three 2’s.
+			- These are all [[Banana Problem]]
 - 7.1
 	- Know what an experiment, sample space, and an event is
+		- **An experiment is a procedure that yields one of a given set of possible outcomes.**  
+			- Circumstances X when finding P(X)
+		- The sample space of the experiment is the set of possible outcomes  
+		- An event is a subset of the sample space
 	- Know how to calculate the probability of an event E
 	- Know how to calculate the probability of the complement of an event. 
 	- Know how to calculate the probability of the union of two events.
 	- Many of these types of questions require you to be competent with counting from unit 7.  
 - Principle of Inclusion-Exclusion
+	- [[Principle of Inclusion-Exclusion]]

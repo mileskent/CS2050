@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "864c5062914ee90e",
+        "id": "d444ecabe600cfa0",
         "type": "tabs",
         "children": [
           {
-            "id": "a5cf37c925533da6",
+            "id": "cadd476ae061edac",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,19 +162,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a5cf37c925533da6",
+  "active": "cadd476ae061edac",
   "lastOpenFiles": [
     "Exam Prep/Exam 4/Exam 4 Topic List.md",
-    "Exam Prep/Exam 4/Exam 4 Prep.md",
     "Banana Problem.md",
+    "Exam Prep/Exam 4/Exam 4 Prep.md",
+    "Pasted image 20241211234311.png",
+    "Pasted image 20241211234200.png",
+    "Pasted image 20241211234010.png",
+    "Pairwise and Mutual Independence.md",
+    "Sum Rule.md",
+    "Product Rule.md",
     "Baye’s Theorem.md",
     "Conditional Probability.md",
     "Binomial Distribution Formula.md",
     "Stars and Bars.md",
     "Principle of Inclusion-Exclusion.md",
-    "Product Rule.md",
     "Fundamental Theorem of Arithmetic.md",
-    "Sum Rule.md",
     "Pasted image 20241211132800.png",
     "Pasted image 20241211131909.png",
     "Exam Prep/Exam 4",
