@@ -291,6 +291,7 @@ tion: x1 + x2 + x3 + x4 = 12
 **1.8.1** How many distinct arrangements can be made using the letters
 in the word: BANANA?
 > [!solution]-
+ See [[Banana Problem]]
 > - Pretend like there are no duplicate letters:
 > $6!$ arrangements
 > - Of those arrangements some will be exactly the same
@@ -398,11 +399,48 @@ for the TA’s to collect their paychecks?
 > $$
 
 **2.1.4** Ronnie decides to reward everyone on the last day of classes by letting everyone get their own McDonald’s Happy Meal. Each student has an option of choosing an entree (Hamburger, McNuggets, McChicken), an appetizer (Fries, Apple Slices), a drink (Chocolate Milk, Coke, Water, Orange Juice), and a toy (Boo Bucket, Mini Crocs, A Batman action figure). How many students must give Ronnie their orders for it to be guaranteed that at least 2 students share the same order.
+> [!solution]-
+> $|E| = 3, |A| = 2, |D| = 4, |T| = 3$
+> There are $3 \cdot 2 \cdot 4 \cdot 3 = 72$ total orders, $\therefore$ after **73** students order, at least 2 are guaranteed to share an exactly alike order.
+
+**2.1.5** How many different strings can be made from ”GOODLUCKONFINALS”
+> [!solution]-
+> len = 16
+> dupes = {(O, 3), (L, 2), (N, 2)}
+> $$
+> \frac{16!}{3!2!2!} \approx 8.71782912\times10^{11}
+> $$
+
+**2.1.6** There are 10 textbooks on a bookshelf. Harsha reads them and then puts them all back on the bookshelf. What is the probability that there are exactly 7 books in the original location on the bookshelf from when Harsha originally grabbed the books?
 
 
-2.1.5 How many different strings can be made from ”GOODLUCKONFINALS”
+**2.1.7** Ronnie and Brito are playing a game because they are both very bored. Ronnie randomly selects a number on the interval $[0, 2024]$, while Brito randomly selects a number on the inteval $[0, 4048]$. The winner of the game is the person who’s random number is greater. 
+	(NOTE: the answer is a very simple fraction. Don’t try to think of specific numbers that Ronnie and Brito pick, rather different cases in which either professor wins)
+- What’s the probability that Ronnie wins? 
+- What’s the probability that Ronnie wins FIVE times in a row?
 
+2.1.8 Saksham and Aidan decide to start a discrete math fraternity,
+called ∆M (we call ourselves DelMu). In order to spread the
+word, they throw a party. In order to have a good ratio, each
+CS major has an 80 percent chance to get in, while all other
+majors only have a 25 percent chance to get in. Evaluate the
+following questions:
+• What’s the probability that a group of 10 CS bros all get in?
+• In a group of 6 non-CS majors, the probability that exactly 4 of the 6
+people get in
+• If you have 50 CS majors in the party, and no other non-CS majors, how
+many non-CS majors should be expected to try to get in before there is a
+50/50 ratio?
+
+2.1.9 Given two sets A and B with |A| = n and |B| = m, we are tasked
+with finding:
+• The number of relations between A and B.
+• The number of functions from A to B.
+• The number of injections from A to B.
+• The number of surjections from A to B.
+• The number of bijections from A to B.
 ### 2.2 Combinatorial Proofs
-2.2.1 Prove with a combinatorial proof that ${n\choose{k}} = {n\choose{n-k}}$
+**2.2.1** Prove with a combinatorial proof that ${n\choose{k}} = {n\choose{n-k}}$
 
-2.2.2 Prove with a combinatorial proof that $1n + 2(n-1) + 3(n-2) + \cdots + (n-1)\cdot 2+n \cdot 1 = \frac{n(n+1)}{2}$
+
+**2.2.2** Prove with a combinatorial proof that $1n + 2(n-1) + 3(n-2) + \cdots + (n-1)\cdot 2+n \cdot 1 = \frac{n(n+1)}{2}$
