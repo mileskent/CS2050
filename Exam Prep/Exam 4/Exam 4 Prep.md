@@ -184,12 +184,15 @@ $P(R) \cdot P(B) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$
 > 1 fixed 
 > - cardinality = $3!$
 > - count = 4
+> 
 > Intersection of 2 fixed 
 > - cardinality = $2!$
 > - count = 6
+> 
 > intersection of 3 fixed 
 > - cardinality = 1
 > - count = 4
+> 
 > intersection of 4 fixed 
 > - cardinality = 1
 > - count = 1
@@ -238,9 +241,9 @@ $P(R) \cdot P(B) = \frac{3}{5} \cdot \frac{2}{4} = \frac{6}{20}$
 ### 1.6 Pigeonhole Principle
 **1.6.1** If there are 11 pairs of socks in your drawer, and you blindly take out one sock at a time until you get a pair. How many socks do you need to take out to guarantee that you have at least one pair of socks?
 > [!solution]-
-$$
- 12
-$$
+> $$
+>  12
+> $$
 
 **1.6.2** 25 crates of apples are delivered to a store. The apples are of 3 different types. All crates only have one type of apple. Show that there is at least one type of apple that has 9 crates of it.
 > [!solution]-
@@ -412,12 +415,30 @@ for the TA’s to collect their paychecks?
 > $$
 
 **2.1.6** There are 10 textbooks on a bookshelf. Harsha reads them and then puts them all back on the bookshelf. What is the probability that there are exactly 7 books in the original location on the bookshelf from when Harsha originally grabbed the books?
-
+> [!solution]-
+> As in if you have 0123456789, how many arrangements have number i in the ith index? What is the probability of exactly 7 in the right location?
+> - Choose 7 books to remain fixed. Let the possible choice for this be $F$
+> - If the other 3 books are 012, where 012 is the correct order, the invalid orders are 120 and 201. There are 2 possible invalid arrangements, $I$
+> - Choices for fixed times invalid arrangements is the size of the set we want
+> $$
+> \frac{C(10, 7) \cdot 2}{10!}
+> $$
 
 **2.1.7** Ronnie and Brito are playing a game because they are both very bored. Ronnie randomly selects a number on the interval $[0, 2024]$, while Brito randomly selects a number on the inteval $[0, 4048]$. The winner of the game is the person who’s random number is greater. 
 	(NOTE: the answer is a very simple fraction. Don’t try to think of specific numbers that Ronnie and Brito pick, rather different cases in which either professor wins)
 - What’s the probability that Ronnie wins? 
+> [!solution]-
+> Case 1: Brito automatically wins because he drew 2025 - 4048 -> whole odds, 2024
+> Case 2: Brito drew in $[0, 2024]$ -> half odds, 2025 
+> $$
+> \frac{1}{4}
+> $$
+
 - What’s the probability that Ronnie wins FIVE times in a row?
+> [!solution]-
+> $$
+> \frac{1}{4}^5
+> $$
 
 2.1.8 Saksham and Aidan decide to start a discrete math fraternity,
 called ∆M (we call ourselves DelMu). In order to spread the
@@ -426,21 +447,49 @@ CS major has an 80 percent chance to get in, while all other
 majors only have a 25 percent chance to get in. Evaluate the
 following questions:
 • What’s the probability that a group of 10 CS bros all get in?
-• In a group of 6 non-CS majors, the probability that exactly 4 of the 6
-people get in
+> [!solution]-
+> $$
+> 0.8^{10}
+> $$
+
+• In a group of 6 non-CS majors, the probability that exactly 4 of the 6 people get in
+> [!solution]-
+> $$
+> p = 0.25
+> P(B(6, 0.25) = 4) = C(6, 4) \cdot p^k \cdot (1-p)^{2}
+> $$
+
 • If you have 50 CS majors in the party, and no other non-CS majors, how
 many non-CS majors should be expected to try to get in before there is a
 50/50 ratio?
+> [!solution]-
+> Need 50 non-CS. Expect $\frac{1}{4}$ of all non-CS to be accepted -> 200
 
 2.1.9 Given two sets A and B with |A| = n and |B| = m, we are tasked
 with finding:
 • The number of relations between A and B.
+> [!solution]-
+> $$
+> 2^{nm}
+> $$
+
 • The number of functions from A to B.
+> [!solution]-
+> $$
+> m^n
+> $$
+
 • The number of injections from A to B.
+> [!solution]
+> $$
+> P(m,n)
+> $$
+
 • The number of surjections from A to B.
+Idek wtf this shit is
 • The number of bijections from A to B.
-### 2.2 Combinatorial Proofs
-**2.2.1** Prove with a combinatorial proof that ${n\choose{k}} = {n\choose{n-k}}$
-
-
-**2.2.2** Prove with a combinatorial proof that $1n + 2(n-1) + 3(n-2) + \cdots + (n-1)\cdot 2+n \cdot 1 = \frac{n(n+1)}{2}$
+> [!solution]
+iif m =n
+> $$
+> n!
+$$
