@@ -323,65 +323,84 @@ in the word: BANANA?
 > C(10,3) \cdot C(8, 3) \cdot C(6, 3) = 120 \cdot 56 \cdot 20 = 134400
 > $$
 
-### 1.9 Bionomial Theorem
-1.9.1 A fair coin is flipped 6 times. What is the probability of getting exactly 3 heads?
+### 1.9 [[Binomial Distribution Formula]]
+**1.9.1** A fair coin is flipped 6 times. What is the probability of getting exactly 3 heads?
+> [!solution]-
+> $$
+> P\left( B\left( 6, \frac{1}{2} \right) = 3 \right) = C(6, 3) \cdot \left( \frac{1}{2} \right)^3 \cdot \left( 1-\frac{1}{2} \right)^{6-3} = \frac{6!}{3!3!} \cdot \left( \frac{1}{2} \right)^6 = \frac{20}{64}
+> $$
 
+**1.9.2** A factory produces light bulbs, and 95% of the light bulbs pass the quality control test. If 15 light bulbs are randomly selected, what is the probability that exactly 12 pass the quality control test?
+> [!solution]-
+> $$
+> P(B(15, 0.95) = 12) = C(15, 12) \cdot (0.95)^{12} \cdot (0.05)^{15 - 12} =  \frac{15!}{12!3!} \cdot (0.95)^{12} \cdot (0.05)^{3} = 0.0307329799858
+> $$
 
-1.9.2 A factory produces light bulbs, and 95% of the light bulbs
-pass the quality control test. If 15 light bulbs are randomly
-selected, what is the probability that exactly 12 pass the qual-
-ity control test?
+**1.9.3** In a classroom, 40% of the students are left-handed. If 5 students are randomly selected, what is the probability that exactly 2 students are left-handed?
+> [!solution]-
+> $$
+> P(B(5, 0.4) = 2) = C(5, 2) \cdot (0.4)^2 \cdot (0.4)^{5 - 2} = 0.3456
+> $$
 
-1.9.3 In a classroom, 40% of the students are left-handed. If 5 stu-
-dents are randomly selected, what is the probability that ex-
-actly 2 students are left-handed?
+### 1.10 [[Baye’s Theorem]]
+**1.10.1** A person uses his car 30% of the time, walks 30% of the time and rides the bus 40% of the time as he goes to work. He is late 10% of the time when he walks; he is late 3% of the time when he drives; and he is late 7% of the time he takes the bus. What is the probability he walked if he is on time? #nokey 
+> [!solution]-
+> $$P(W \mid T) = \frac{P(T \mid W) \cdot P(W)}{P(T)}$$
+> $P(T \mid W) = 0.9$, $P(W) = 0.3$
+> $P(T \mid C) = 0.97$, $P(C) = 0.3$
+> $P(T \mid B) = 0.93$, $P(B) = 0.4$
+> $P(T) = P(C)P(T \mid C) + P(W) P(T \mid W) + P(B) P(T \mid B) = 0.3 \cdot 0.97 + 0.3 \cdot 0.9 + 0.4 \cdot 0.93 = 0.933$
+> $$P(W \mid T) = \frac{P(T \mid W) \cdot P(W)}{P(T)} = 0.289389067524$$
 
-### 1.10 Baye’s
-1.10.1 A person uses his car 30% of the time, walks 30% of the time
-and rides the bus 40% of the time as he goes to work. He
-is late 10% of the time when he walks; he is late 3% of the
-time when he drives; and he is late 7% of the time he takes
-the bus. What is the probability he walked if he is on time?
-
-1.10.2 Company A supplies 40% of the computers sold and is late
-5% of the time. Company B supplies 30% of the computers
-sold and is late 3% of the time. Company C supplies another
-30% and is late 2.5% of the time. A computer arrives late -
-what is the probability that it came from Company A?
+**1.10.2** Company A supplies 40% of the computers sold and is late 5% of the time. Company B supplies 30% of the computers sold and is late 3% of the time. Company C supplies another 30% and is late 2.5% of the time. 
+	A computer arrives late. What is the probability that it came from Company A?
+> [!solution]-
+> $P(A)= 0.4$
+> $P(L \mid A)= 0.05$
+> $P(L)= P(A)P(L \mid A) + P(B)P(L\mid B) + P(C)P(L \mid C)$
+> $$
+> P(A \mid L) = \frac{P(L \mid A)P(A)}{P(L)} = \frac{P(L \mid A)P(A)}{P(A)P(L \mid A) + P(B)P(L\mid B) + P(C)P(L \mid C)} = 0.547945205479
+> $$
 
 # 2 Advanced Problems (These are exam level difficulty)
 ### 2.1 Word Problems
-2.1.1 10 2050 TA’s all are waiting to collect their paychecks. Kavya,
+**2.1.1** 10 2050 TA’s all are waiting to collect their paychecks. Kavya,
 and Anthony being Head TA’s get to collect their paychecks
 before the other TA’s. How many different orders are there
 for the TA’s to collect their paychecks?
+> [!solution]-
+> K and A will always be the first two -> KA or AK -> 2 ways
+> How many ways are there for 8 items to be ordered? $8!$ ways
+> $$
+> 2 \cdot 8! = 80640
+> $$
 
-2.1.2 Brito is getting pizza’s for the TA grading party. He is buying
-24 pizzas in total. He can buy pepperoni, chicken, sausage,
-and cheese pizzas. In how many ways can he buy pizzas if he
-has to buy at least 4 of each type of pizza?
+**2.1.2** Brito is getting pizza’s for the TA grading party. He is buying 24 pizzas in total. He can buy pepperoni, chicken, sausage, and cheese pizzas. In how many ways can he buy pizzas if he has to buy at least 4 of each type of pizza?
+> [!solution]-
+> - 4 types of pizza
+> - 24 total
+> a + b + c + d = 24        $a, b, c, d \geq 4$
+> Because each type of pizza requires at least 4 items, allocate pizzas as such
+> a + b + c + d = 8        $a, b, c, d \geq 0$
+> This is now a [[Stars and Bars]] problem
+> $$
+> C(8+3, 3) = C(11, 3) = \frac{11!}{8!3!} = \frac{11 \cdot 10 \cdot 9}{3 \cdot 2} = 5 \cdot 11 \cdot 3= 165
+> $$
 
-2.1.3 Saksham is using Prize Picks to make a parlay. He wants
-to make a 4 pick parlay based around picking players to score
-above their projected points for a game in the upcoming Celtics
-vs Cavs game. To make his parlay he wants to pick at least
-one of the two star players on the Celtics (Jaylen Brown and
-Derrick White), but not both. Outside of these 2 players there
-are 6 other players that Saksham could pick for his parlay (Ja-
-son Tatum, Donovan Mitchell, Ty Jerome, Luke Kornet, Max
-Strus, Craig Porter Jr.
+**2.1.3** Saksham is using Prize Picks to make a parlay. He wants to make a 4 pick parlay based around picking players to score above their projected points for a game in the upcoming Celtics vs Cavs game. To make his parlay he wants to pick at least one of the two star players on the Celtics (Jaylen Brown and Derrick White), but not both. Outside of these 2 players there are 6 other players that Saksham could pick for his parlay (Jason Tatum, Donovan Mitchell, Ty Jerome, Luke Kornet, Max Strus, Craig Porter Jr).
+> [!solution]-
+> - Picking 4 people
+> - Pick exactly one from 2
+> - Pick 3 from 6
+> - Order doesn't matter
+> $$
+> C(2, 1) \cdot C(6, 3) = 2 \cdot \frac{6 \cdot 5 \cdot 4}{3 \cdot 2} = 40
+> $$
 
-2.1.4 Ronnie decides to reward everyone on the last day of classes
-by letting everyone get their own McDonald’s Happy Meal.
-Each student has an option of choosing an entree (Hamburger,
-McNuggets, McChicken), an appetizer (Fries, Apple Slices), a
-drink (Chocolate Milk, Coke, Water, Orange Juice), and a toy
-(Boo Bucket, Mini Crocs, A Batman action figure). How many
-students must give Ronnie their orders for it to be guaranteed
-that at least 2 students share the same order.
+**2.1.4** Ronnie decides to reward everyone on the last day of classes by letting everyone get their own McDonald’s Happy Meal. Each student has an option of choosing an entree (Hamburger, McNuggets, McChicken), an appetizer (Fries, Apple Slices), a drink (Chocolate Milk, Coke, Water, Orange Juice), and a toy (Boo Bucket, Mini Crocs, A Batman action figure). How many students must give Ronnie their orders for it to be guaranteed that at least 2 students share the same order.
 
-2.1.5 How many different strings can be made from ”GOODLUCK-
-ONFINALS”
+
+2.1.5 How many different strings can be made from ”GOODLUCKONFINALS”
 
 ### 2.2 Combinatorial Proofs
 2.2.1 Prove with a combinatorial proof that ${n\choose{k}} = {n\choose{n-k}}$
